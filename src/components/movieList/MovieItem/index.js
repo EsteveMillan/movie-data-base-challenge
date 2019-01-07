@@ -6,7 +6,13 @@ export default class MovieIitem  extends Component{
     const {movie} = this.props;
     return(
       <div>
-      {movie.title}
-      <Link to={`/movie/${movie.id}`}>Movie Detail</Link>
-      </div>)
-    }
+        {movie.title}
+        <Link to={{
+          pathname: `/movie/${movie.id}`,
+          state: { movieInfo: {movie} }
+        }}>
+        Movie Detail
+        </Link> 
+      </div>);
+  }
+}

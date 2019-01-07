@@ -8,23 +8,24 @@ export default class Home extends Component{
   constructor(props){
     super(props);
     this.state = {
-      movies: null;
-    }
+      movies: null
+    };
   }
 
   loadData = async () => {
-    const movie = await ApiCall.nowPlaying();
+    const movies = await ApiCall.nowPlaying();
     this.setState({movies});
   }
 
   componentDidMount(){
-    this.loadData()
+    this.loadData();
   }
 
   render(){
+    const {movies} = this.state;
     return(
       <div>
-       { this.state.movies===null ? <div>Loading...</div> : <Movielist movies={this.state.movies}/>}
+        { movies===null ? <div>Loading...</div> : <Movielist movies={movies}/>}
       </div>);
   }}
   

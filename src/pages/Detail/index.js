@@ -1,9 +1,19 @@
-import React from 'react';
+import React , {Component} from 'react';
 import {Link} from 'react-router-dom';
+import MovieDetail from '../../components/movieList/MovieDetail';
 
-const Detail = ()=> (
+class Detail extends Component {
 
-  <Link to='/'> llevame a home </Link>
-);
+  
+  render(){
+    const {movie} = this.props.location.state.movieInfo;
+    return (
+      
+      <div>
+        <Link to='/'> llevame a home </Link>
+        <MovieDetail movieInfo={movie}/>
+      </div>
+    );}
+}
 
 export default Detail;

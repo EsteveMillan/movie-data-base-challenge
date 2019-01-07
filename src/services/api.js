@@ -7,7 +7,7 @@ const API_CALLS = {
   getPopular: `https:api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`,
   getRated: `https:api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&language=en-US&page=1`,
   getUpcome: `https:api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}&language=en-US&page=1`,
-  //getOneMovie: `https:api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=' + filmName`,
+  getOneMovie: `https:api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=`,
 };
 
 export default class ApiCall {
@@ -20,10 +20,13 @@ export default class ApiCall {
     static getMovies = async (url) =>{
       try{
         let response = await axios.get(url);
-      
+  
         if(response.status === 200) {
           console.log(response.status);
-        }}
+          console.log(response.data.results);
+        }
+        return response.data;
+      }
       catch(error){ console.log(error);}
     };
 

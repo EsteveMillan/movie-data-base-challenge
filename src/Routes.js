@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Detail from './pages/Detail';
 import Home from './pages/Home';
 import Explore from './pages/Explore';
 
-export default class Routes {
+export default class Routes extends Component{
   render(){
     return (
       <Router>
