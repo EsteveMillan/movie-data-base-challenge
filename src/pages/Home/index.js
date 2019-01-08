@@ -15,6 +15,7 @@ export default class Home extends Component{
   loadData = async () => {
     const movies = await ApiCall.nowPlaying();
     this.setState({movies});
+    console.log({movies});
   }
 
   componentDidMount(){

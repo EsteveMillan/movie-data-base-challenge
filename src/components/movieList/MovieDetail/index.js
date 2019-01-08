@@ -6,7 +6,7 @@ export default class MovieDetail  extends Component{
 
   render(){
     const {movieInfo} = this.props;
-    console.log( movieInfo );
+    console.log( movieInfo.results );
     return(
       <div>
         <h2>{movieInfo.title}</h2>
