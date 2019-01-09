@@ -1,9 +1,31 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React, {Component} from 'react';
+import Movielist from '../../components/movieList';
+import Header from '../../components/header';
+import ApiCall from '../../services/api';
 
-const Explore = ()=> (
+export default class Explore extends Component{
 
-  <Link to='/explore'> Explore </Link>
-);
+  constructor(props){
+    super(props);
+    this.state = {
+      movies: null
+    };
+  }
 
-export default Explore;
+  loadData = async () => {
+    const movies = await ApiCall.getPopular();
+    this.setState({movies});
+  }
+
+  componentDidMount(){
+    this.loadData();
+  }
+
+  render(){
+    const {movies} = this.state;
+    return(
+      <div>
+        <Header/>
+        { movies===null ? <div>Loading...</div> : <Movielist movies={movies}/>}
+      </div>);
+  }}

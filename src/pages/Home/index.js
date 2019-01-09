@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
 import Movielist from '../../components/movieList';
+import Header from '../../components/header';
 import ApiCall from '../../services/api';
 
 export default class Home extends Component{
@@ -15,7 +15,6 @@ export default class Home extends Component{
   loadData = async () => {
     const movies = await ApiCall.nowPlaying();
     this.setState({movies});
-    console.log({movies});
   }
 
   componentDidMount(){
@@ -26,6 +25,7 @@ export default class Home extends Component{
     const {movies} = this.state;
     return(
       <div>
+        <Header/>
         { movies===null ? <div>Loading...</div> : <Movielist movies={movies}/>}
       </div>);
   }}

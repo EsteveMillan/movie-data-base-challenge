@@ -6,7 +6,13 @@ export default class MovieIitem  extends Component{
     const {movie} = this.props;
     return(
       <div>
-        {movie.title}
+        <h3>{movie.title}</h3>
+        <Link to={{
+          pathname: `/movie/${movie.id}`,
+          state: { movieInfo: {movie} }
+        }}>
+          <img src={`https://image.tmdb.org/t/p/w200/${movie.backdrop_path}`}></img>
+        </Link> 
         <Link to={{
           pathname: `/movie/${movie.id}`,
           state: { movieInfo: {movie} }

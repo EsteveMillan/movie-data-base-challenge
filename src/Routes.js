@@ -8,6 +8,7 @@ export default class Routes extends Component{
   render(){
     return (
       <Router>
+        
         <Switch>
           <Route exact path="/" component={Home}></Route>
           <Route path="/movie/:id" component={Detail}></Route>

@@ -3,14 +3,13 @@ import {Link} from 'react-router-dom';
 
 export default class MovieDetail  extends Component{
 
-
   render(){
     const {movieInfo} = this.props;
-    console.log( movieInfo.results );
+    console.log(movieInfo);
     return(
       <div>
         <h2>{movieInfo.title}</h2>
-        <img src={movieInfo.poster_path}></img>
+        <img src={`https://image.tmdb.org/t/p/w300/${movieInfo.poster_path}`}></img>
         <div>{movieInfo.overview}</div>   
       </div>);
   }
