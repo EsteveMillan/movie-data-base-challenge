@@ -1,0 +1,32 @@
+
+// FLEX BASICS AND IMAGES
+
+@mixin flex-basics ($direction , $wrap, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: $align;
+    
+}
+
+// BUTTON STYLE
+
+  
+@mixin standard-button-style {
+    margin: 0 0 10px 0;
+    font: $main-font;
+    background: none;
+    padding: 10px;
+    color: $dark-grey;
+    font-size: 15px ;
+    border: solid 1px $light-grey;
+    background-color: $secondary-color;
+    border-radius: 5px;
+  
+    &:hover{
+      color: $secondary-color;
+      background-color: $primary-color;
+  
+    }
+ }

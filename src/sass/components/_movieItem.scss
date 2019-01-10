@@ -1,0 +1,21 @@
+
+.movie-item{
+    padding-bottom: 15px;
+    background-color: $dark-grey;
+    
+    h3 { 
+        width: 199px;
+        font-size: $s;
+        top: 100px;
+        margin-bottom: 0px;
+        margin-top: 10px;
+        margin-left:10px;
+        color: $primary-color;
+    }
+
+    .movie-item-more{
+        color: $secondary-color;
+        margin-left:10px;
+    }
+    
+}

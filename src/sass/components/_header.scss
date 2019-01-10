@@ -3,9 +3,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:#081c24;
+    background-color:$dark-grey;
+    padding: 0px 5% 16px;
 
     #page-title h1{
-        color:#d4d4d4;
+        color:$light-grey;
     }
+
+    #menu a{
+        padding-left: 20px;
+        color:$light-grey; 
+    } 
 }

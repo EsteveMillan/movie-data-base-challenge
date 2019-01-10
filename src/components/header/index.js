@@ -6,7 +6,7 @@ export default class Header extends Component {
     return(
       <div id="header">
         <div id="page-title"><h1>Movies DB</h1></div>
-        <Navbar/>
+        <Navbar id="nav-bar"/>
       </div>
     );
   }  

@@ -1,4 +1,8 @@
+@import './sass/base/_mixins.scss';
+@import './sass/base/_vars.scss';
+
 // BASE
+
 
 html, body {
     height: 100%;
@@ -15,7 +19,6 @@ main{
 
 h1, h2, h3{
 margin: 16px 0px 10px 0px;
-
 }
 
 h1{
@@ -31,25 +34,20 @@ h3{
 }
 
 img{
-
   max-width: 100%;
 }
 
 .page-tittle{
-
   @include flex-basics(row, nowrap, center, center );
   color: $secondary-color;
   background-color: $primary-color;
 
   h1{
-    
-    @include site-mobile-margin;
     font-size: $l;
   }
 }  
 
 ul, ol, li{
-  
   padding: 0;
   list-style: none;
 }
@@ -58,9 +56,6 @@ p{
   margin: 0px 0px 15px 0px;
 }
 
-.destacado-fuente{
-  color: $primary-color;
-}
 
 a{
     text-decoration: none;

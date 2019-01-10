@@ -1,0 +1,42 @@
+.movie-detail-wrap{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(top, $dark-grey 10%,$light-grey 10%);
+
+    .movie-detail{
+        flex-basis: 70%;
+        height: 60%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center; 
+        background-color:$secondary-color;
+        padding: 5%;
+        color: $dark-grey;
+    }
+
+    .movie-detail-info {
+        flex-basis: 75%;
+        margin-left: 20px;
+
+        h2{
+            font-size: $xxl;
+        }
+
+        .release-date{
+            font-size: $m;
+            color: $middle-grey;
+        }
+
+        .rating, .movie-detail-overview{
+            font-size: $s;
+            color: $middle-grey;
+        }
+
+        a{
+            
+        }
+    }
+}

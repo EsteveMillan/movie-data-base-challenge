@@ -1,0 +1,15 @@
+.movie-list-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: linear-gradient(top, $dark-grey 10%,$light-grey 10%);
+    
+
+    .movie-list{
+        flex-basis: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
